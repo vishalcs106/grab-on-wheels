@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/images"
+        android:id="@+id/propertyImage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2BHK"
+            android:textSize="16sp"
+            android:textColor="#FFF"
+            android:id="@+id/typeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/addText"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="#fff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/priceText"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+</RelativeLayout>

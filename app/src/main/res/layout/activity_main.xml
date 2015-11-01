@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.got.activity.BusNearMeActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mapLayout"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/mapDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/draw_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:onClick="drawZone"
+            android:padding="10dp"
+            android:background="@drawable/btn_draw"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <View
+            android:id="@+id/drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        </RelativeLayout>
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:longClickable="true"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/bottomLayout">
+
+    </LinearLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</RelativeLayout>
+
